@@ -2,12 +2,15 @@
 
 buildscript {
     repositories {
+        mavenLocal() //直接使用本地maven仓库
+        //maven { url 'http://maven.aliyun.com/mvn/repository/' } //aliyun maven 远程仓库，##路径错误##
+        //maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' } //aliyun maven 远程仓库，##有包在aliyun上下不到##
+        mavenCentral() //maven中央远程仓库
         jcenter { url "http://jcenter.bintray.com/" }
-        maven { url 'http://maven.aliyun.com/mvn/repository/' }
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath 'com.android.tools.build:gradle:3.2.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -15,7 +18,12 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
+        mavenLocal() //直接使用本地maven仓库
+        //maven { url 'http://maven.aliyun.com/mvn/repository/' } //aliyun maven 远程仓库，##路径错误##
+        //maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' } //aliyun maven 远程仓库，##有包在aliyun上下不到##
+        mavenCentral() //maven中央远程仓库
+        jcenter { url "http://jcenter.bintray.com/" }
+//        jcenter()
         google()
     }
 }
