@@ -12,6 +12,7 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
 import me.firesun.wechat.enhancement.plugin.ADBlock;
 import me.firesun.wechat.enhancement.plugin.AntiRevoke;
 import me.firesun.wechat.enhancement.plugin.AntiSnsDelete;
+import me.firesun.wechat.enhancement.plugin.AutoAgreeFriend;
 import me.firesun.wechat.enhancement.plugin.AutoLogin;
 import me.firesun.wechat.enhancement.plugin.HideModule;
 import me.firesun.wechat.enhancement.plugin.IPlugin;
@@ -33,6 +34,7 @@ public class Main implements IXposedHookLoadPackage {
             new HideModule(),
             new LuckMoney(),
             new Limits(),
+            new AutoAgreeFriend()
     };
 
     @Override
