@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
 
-    signingConfigs {
+    /*signingConfigs {
         debug {
             storeFile file("keystore/debug.keystore")
             storePassword "firesun"
@@ -15,13 +15,13 @@ android {
             keyAlias "firesun"
             keyPassword "firesun"
         }
-    }
+    }*/
 
     compileSdkVersion 23
-    buildToolsVersion "27.0.3"
+    buildToolsVersion "28.0.2"
     defaultConfig {
         applicationId "me.firesun.wechat.enhancement"
-        minSdkVersion 17
+        minSdkVersion 19
         targetSdkVersion 23
         versionCode 40
         versionName "1.6.0"
@@ -29,7 +29,7 @@ android {
 
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+            //signingConfig signingConfigs.release
             minifyEnabled true
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
